@@ -10,12 +10,18 @@ import java.util.Map;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import ScoutAPI.RestAssuredDemo.Base;
 import ScoutAPI.RestAssuredDemo.payloads;
 import Utilities.Reporting;
 import io.restassured.RestAssured;
 
 public class AddEditProductionGoal  {
+	
+	
+	ExtentTest test=Reporting.extent.createTest("Newone");
+	
 	@Test(dataProvider="data")
 	public static void AddEditProductionGoal(Object Id, Object AccountId, Object DoctorId, Object DailyGoal ,Object WeeklyGoal, Object MonthlyGoal,Object YearlyGoal,Object WidgetId,Object Remark, Object IsActive, Object  ActionBy, Object AssertionElement,Object AssertionElementExpected) throws Exception {
 		
@@ -35,7 +41,7 @@ public class AddEditProductionGoal  {
 		
 		//Id, AccountId,DoctorId, DailyGoal, WeeklyGoal, MonthlyGoal, YearlyGoal, WidgetId, Remark, IsActive, ActionBy, AssertionElement, AssertionElementExpected
 		//0, 41728, 58779, 4.5, 2.4, 3.5, 4.5, 6,"hey", true, 5
-		Reporting.extent.createTest("Newone");
+	
 		
 		
    

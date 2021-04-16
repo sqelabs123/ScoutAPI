@@ -16,7 +16,7 @@ import io.restassured.RestAssured;
 
 public class LoadDashboardAPI {
 	@Test(dataProvider="data")
-	public static void loadDashboard(int AccountId,int UserId,int ChartType,String StartDate, String EndDate) throws Exception {
+	public static void loadDashboard(Object AccountId,Object UserId,Object ChartType,Object StartDate, Object EndDate) throws Exception {
 		
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
@@ -39,8 +39,8 @@ public class LoadDashboardAPI {
 	public Object[][] data()
 	{
 		Object[][] test={
-				{0, 12342, 0, "", ""},
-				/*{41728, 3, 0, "2021-01-06T22:35:46.0327652-07:00", "2021-02-3T22:35:46.0327652-07:00"},
+				{null, 12342, null, null, null}
+				/*,{41728, 3, 0, "2021-01-06T22:35:46.0327652-07:00", "2021-02-3T22:35:46.0327652-07:00"},
 				{41728, 3, 0, "2021-01-06T22:35:46.03:00", "2021-02-3T22:35:46.0327652-07:00"}*/};
 		return test;
 	}
