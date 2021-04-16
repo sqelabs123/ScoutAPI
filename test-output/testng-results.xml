@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="5" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="12233" started-at="2021-04-15T12:33:28Z" finished-at="2021-04-15T12:33:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="12233" started-at="2021-04-15T12:33:28Z" finished-at="2021-04-15T12:33:40Z">
+      <class name="Tests.AddEditProductionGoal">
+        <test-method status="FAIL" signature="AddEditProductionGoal(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)[pri:0, instance:Tests.AddEditProductionGoal@1794d431]" name="AddEditProductionGoal" duration-ms="5715" started-at="2021-04-15T18:03:28Z" data-provider="data" finished-at="2021-04-15T18:03:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[IsSuccess]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at ScoutAPI.RestAssuredDemo.Base.Assert(Base.java:34)
+	at Tests.AddEditProductionGoal.AddEditProductionGoal(AddEditProductionGoal.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEditProductionGoal -->
+        <test-method status="PASS" signature="AddEditProductionGoal(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)[pri:0, instance:Tests.AddEditProductionGoal@1794d431]" name="AddEditProductionGoal" duration-ms="1705" started-at="2021-04-15T18:03:34Z" data-provider="data" finished-at="2021-04-15T18:03:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[41728]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[58779]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4.5]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2.4]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[3.5]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[4.5]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[IsSuccess]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEditProductionGoal -->
+        <test-method status="PASS" signature="AddEditProductionGoal(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)[pri:0, instance:Tests.AddEditProductionGoal@1794d431]" name="AddEditProductionGoal" duration-ms="1620" started-at="2021-04-15T18:03:36Z" data-provider="data" finished-at="2021-04-15T18:03:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[41728]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[58779]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[IsSuccess]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEditProductionGoal -->
+        <test-method status="FAIL" signature="AddEditProductionGoal(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)[pri:0, instance:Tests.AddEditProductionGoal@1794d431]" name="AddEditProductionGoal" duration-ms="1583" started-at="2021-04-15T18:03:37Z" data-provider="data" finished-at="2021-04-15T18:03:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[41728]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[58760]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Not corresponding to the accountId]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[IsSuccess]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at ScoutAPI.RestAssuredDemo.Base.Assert(Base.java:34)
+	at Tests.AddEditProductionGoal.AddEditProductionGoal(AddEditProductionGoal.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEditProductionGoal -->
+        <test-method status="PASS" signature="AddEditProductionGoal(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)[pri:0, instance:Tests.AddEditProductionGoal@1794d431]" name="AddEditProductionGoal" duration-ms="1557" started-at="2021-04-15T18:03:39Z" data-provider="data" finished-at="2021-04-15T18:03:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[41856]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[58915]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1.8]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5.7]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6.8]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hey]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[IsSuccess]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEditProductionGoal -->
+      </class> <!-- Tests.AddEditProductionGoal -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
