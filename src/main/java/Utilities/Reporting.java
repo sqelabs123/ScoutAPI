@@ -22,7 +22,7 @@ import com.aventstack.extentreports.reporter.*;
 public class Reporting  {
      // ExtentSparkReporter
 	
-	private static ExtentReports extent;
+	public static ExtentReports extent;
 	//String path;
 	//try{
 

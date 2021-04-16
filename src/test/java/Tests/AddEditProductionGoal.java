@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import ScoutAPI.RestAssuredDemo.Base;
 import ScoutAPI.RestAssuredDemo.payloads;
+import Utilities.Reporting;
 import io.restassured.RestAssured;
 
 public class AddEditProductionGoal  {
@@ -20,6 +21,7 @@ public class AddEditProductionGoal  {
 		
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
+		
 		RestAssured.baseURI = Base.Propertis("baseURI");
 
 		String response = given().log().all().header("Content-Type", Base.Propertis("Content-Type")).header("access_token",Base.Propertis("access_token")).body(payloads.AddEditProduction(Id,AccountId,DoctorId,  DailyGoal , WeeklyGoal,  MonthlyGoal, YearlyGoal, WidgetId, Remark,  IsActive,   ActionBy))
@@ -33,6 +35,8 @@ public class AddEditProductionGoal  {
 		
 		//Id, AccountId,DoctorId, DailyGoal, WeeklyGoal, MonthlyGoal, YearlyGoal, WidgetId, Remark, IsActive, ActionBy, AssertionElement, AssertionElementExpected
 		//0, 41728, 58779, 4.5, 2.4, 3.5, 4.5, 6,"hey", true, 5
+		Reporting.extent.createTest("Newone");
+		
 		
    
 	}
