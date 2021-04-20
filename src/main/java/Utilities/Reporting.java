@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.Assert;
-
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import org.testng.annotations.Test;
@@ -22,17 +22,13 @@ import com.aventstack.extentreports.reporter.*;
 public class Reporting  {
      // ExtentSparkReporter
 	
-	public static ExtentReports extent;
-	//String path;
-	//try{
+	public  ExtentReports extent;
+	
 
-	@BeforeTest
-
-	public void config() throws Exception
+	public  ExtentReports config() throws Exception
 
 	{
-
-		// ExtentReports , ExtentSparkReporter
+		try{
 
 		 String path = System.getProperty("user.dir") + "\\reports\\index.html";
  
@@ -40,13 +36,20 @@ public class Reporting  {
 
 		reporter.config().setReportName("Web Results");
 
-		reporter.config().setDocumentTitle("Tes");
+		reporter.config().setDocumentTitle("Test");
 		
 		extent = new ExtentReports();
 
 		extent.attachReporter(reporter);
 
 		extent.setSystemInfo("Tester", "Vishal");
+		
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return extent;
 
 	}
 }

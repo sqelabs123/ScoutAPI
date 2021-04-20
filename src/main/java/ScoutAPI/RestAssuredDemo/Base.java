@@ -2,9 +2,15 @@ package ScoutAPI.RestAssuredDemo;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.path.json.JsonPath;
 
@@ -31,8 +37,19 @@ public class Base {
 		}
 	
 	public static void Assert(String actual, String expected){
-		Assert.assertEquals(actual, expected);
+		SoftAssert sa = new SoftAssert();
+		sa.assertEquals(actual, expected);
 
+	}
+	
+	
+	
+	public static String MapToJSON(Map<String, Object> a) throws JsonProcessingException
+	{
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		String json = objectMapper.writeValueAsString(a);
+	return 	json;
 	}
 
 }
