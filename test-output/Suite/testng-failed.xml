@@ -2,13 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="Tests.Listeners"/>
+    <listener class-name="Tests.Listeners1234"/>
   </listeners>
   <test name="Test(failed)">
     <classes>
       <class name="Tests.AddEditProductionGoal">
         <methods>
-          <include name="AddEditProductionGoals" invocation-numbers="0 1 2 3 4"/>
+          <include name="config"/>
+          <include name="teardown"/>
+          <include name="AddEditProductionGoals" invocation-numbers="3"/>
         </methods>
       </class> <!-- Tests.AddEditProductionGoal -->
     </classes>

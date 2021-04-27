@@ -39,7 +39,7 @@ public class Base {
 	public static void Assert(String actual, String expected){
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actual, expected);
-
+ 
 	}
 	
 	

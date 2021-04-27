@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,24 +21,28 @@ import ScoutAPI.RestAssuredDemo.Base;
 import ScoutAPI.RestAssuredDemo.payloads;
 import Utilities.Assertions;
 import Utilities.Reporting;
+import groovy.util.logging.Log;
 import io.restassured.RestAssured;
 
 public class AddEditProductionGoal extends Reporting  {
+	//private static Logger log= Logger.getLogger(AddEditProductionGoal.class.getName());
 	
-	ExtentReports extent;
-	@BeforeTest
+	
+	
+	static ExtentTest test;
+	/*@BeforeMethod
 	public void initaialise() throws Exception
 	{
-       extent = config();
-       extent.createTest("A");
-	}
+       test = Reporting.extent.createTest("ABC");
+       
+	}*/
+	
 	
 	@Test(dataProvider="data")
-	public static void AddEditProductionGoals(Object Id, Object AccountId, Object DoctorId, Object DailyGoal ,Object WeeklyGoal, Object MonthlyGoal,Object YearlyGoal,Object WidgetId,Object Remark, Object IsActive, Object  ActionBy, int statuscode,Map<String,Object> a) throws Exception {
-		//System.out.println( Id);
-		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
-	     
+	public static void AddEditProductionGoals(Object Id, Object AccountId, Object DoctorId, Object DailyGoal ,Object WeeklyGoal, Object MonthlyGoal,Object YearlyGoal,Object WidgetId,Object Remark, Object IsActive, Object  ActionBy, int statuscode,Map<String,Object> a,Object y) throws Exception {
+//		System.out.println(Id);
+		//String Testname=(String) y;
+		// test = Reporting.extent.createTest((String) y);
 		
 		RestAssured.baseURI = Base.Propertis("baseURI");
 
@@ -52,8 +58,9 @@ public class AddEditProductionGoal extends Reporting  {
 		String s=pair.getKey();
 		String l=String.valueOf(pair.getValue());
 		
-		Base.Assert(Base.JsonConverter(response,""+s+""), ""+l+"");
+	   	Base.Assert(Base.JsonConverter(response,""+s+""), ""+l+"");
 		}
+		
 		
 		
 		
@@ -74,13 +81,13 @@ public class AddEditProductionGoal extends Reporting  {
 Object[][] test={
 		
 		
-//Id, AccountId,DoctorId, DailyGoal, WeeklyGoal, MonthlyGoal, YearlyGoal, WidgetId, Remark, IsActive, ActionBy, AssertionElement, AssertionElementExpected
+//Id, AccountId,DoctorId, DailyGoal, WeeklyGoal, MonthlyGoal, YearlyGoal, WidgetId, Remark, IsActive, ActionBy,Status Code, Assertions.API("m1"), Testname
 
-				{null,     null,     null,   null,   null,   null,   null, null,"hey",    null, null, 400, Assertions.AddEditProduction("m1")},
-			    {null, 41728, 58779, 4.5, null, null, null, 6,null, null, 1,                      200, Assertions.AddEditProduction("m2")},
-				{null, 41728, 58779,   1,   null,   null,   null, 6,"hey", true, 5,200, Assertions.AddEditProduction("m3")},
-				{null, 41728, 58760, 1.0,   null,   null,   null, 1,"Not corresponding to the accountId", true, 5,400, Assertions.AddEditProduction("m4")},
-				{2, 41856, 58915, 9.0, 1.8, 5.7, 6.8, 3,"hey", false,5,200, Assertions.AddEditProduction("m5")}
+				{null,  null,  null,null,   null, null, null, null,"hey",    null, null, 400, Assertions.AddEditProduction("m1"),"First"},
+			    {null, 41728, 58779, 4.5,   null, null, null,    6, null,    null,    1, 200, Assertions.AddEditProduction("m2"),"Second"},
+				{null, 41728, 58779,   1,   null, null, null, 6,"hey", true, 5,200, Assertions.AddEditProduction("m3"),"Third"},
+				{null, 41728, 58760, 1.0,   null, null, null, 1,"Not corresponding to the accountId", true, 5,400, Assertions.AddEditProduction("m4"),"Fourth"},
+				{   2, 41856, 58915, 9.0,    1.8, 5.7, 6.8, 3,"hey", false,5,200, Assertions.AddEditProduction("m5"),"Fifth"}
 				
 				
 				};

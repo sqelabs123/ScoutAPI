@@ -10,19 +10,25 @@ import java.util.Map;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import ScoutAPI.RestAssuredDemo.Base;
 import ScoutAPI.RestAssuredDemo.payloads;
 import Utilities.Assertions;
 import Utilities.ExcelDataDriven;
+import Utilities.Reporting;
 import io.restassured.RestAssured;
 
 public class LoadDashboardAPI {
+	static ExtentTest test;
 	@Test(dataProvider="data")
-	public static void loadDashboard(Object AccountId,Object UserId,Object ChartType,Object StartDate, Object EndDate, int statuscode,Map<String,Object> a) throws Exception {
+	public static void loadDashboard(Object AccountId,Object UserId,Object ChartType,Object StartDate, Object EndDate, int statuscode,Map<String,Object> a,Object y) throws Exception {
 		
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 		RestAssured.baseURI = Base.Propertis("baseURI");
+		test = Reporting.extent.createTest((String) y);
+		
 
 		String response = given().log().all().header("Content-Type", Base.Propertis("Content-Type")).header("access_token",Base.Propertis("access_token")).body(payloads.loadDashboard(AccountId, UserId, ChartType, StartDate, EndDate))
 				.when().post("api/report/LoadDashboardSummary")
@@ -47,10 +53,11 @@ public class LoadDashboardAPI {
 	public Object[][] data()
 	{
 		Object[][] test={
-				{41728, 12342, null, null, null, 400,Assertions.LoadDashboard("m1")}
-				/*,{41728, 3, 0, "2021-01-06T22:35:46.0327652-07:00", "2021-02-3T22:35:46.0327652-07:00"},
-				{41728, 3, 0, "2021-01-06T22:35:46.03:00", "2021-02-3T22:35:46.0327652-07:00"}*/};
+				{41728, 12342, null, null, null, 400,Assertions.LoadDashboard("m1"),"Fisrt"}
+				,{41728,    3, null, "2021-01-06T22:35:46.0327652-07:00", "2021-02-3T22:35:46.0327652-07:00",200,Assertions.LoadDashboard("m2"),"Second"},
+				{41728,     3, null, "2021-01-06T22:35:46.03:00", "2021-02-3T22:35:46.0327652-07:00",200,Assertions.LoadDashboard("m3"),"Third"}};
+		
+	
 		return test;
-	}
-
+}
 }

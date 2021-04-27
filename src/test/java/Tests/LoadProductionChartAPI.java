@@ -9,18 +9,23 @@ import java.util.Map;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import ScoutAPI.RestAssuredDemo.Base;
 import ScoutAPI.RestAssuredDemo.payloads;
 import Utilities.Assertions;
+import Utilities.Reporting;
 import io.restassured.RestAssured;
 
 public class LoadProductionChartAPI {
+	static ExtentTest test;
 	@Test(dataProvider="data")
-	public static void LoadProductionChart(int AccountId, int UserId, int ChartType, String StartDate, String EndDate, int statuscode,Map<String,Object> a) throws Exception {
+	public static void LoadProductionChart(int AccountId, int UserId, int ChartType, String StartDate, String EndDate, int statuscode,Map<String,Object> a,Object y) throws Exception {
 		
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 		RestAssured.baseURI = Base.Propertis("baseURI");
+		test = Reporting.extent.createTest((String) y);
 
 		String response = given().log().all().header("Content-Type", Base.Propertis("Content-Type")).header("access_token",Base.Propertis("access_token")).body(payloads.LoadProductionChart(AccountId,  UserId,  ChartType,  StartDate,  EndDate))
 				.when().post("api/report/LoadProductionChart")
@@ -43,9 +48,9 @@ public class LoadProductionChartAPI {
 	public Object[][] data()
 	{
 		Object[][] test={
-				{41729, 0, 2, null, null,200,Assertions.LoadProduction("m1")},
-				/*{41729, 0, 2, "", "",200,Assertions.LoadProduction("m2")},
-				{41729, 0, 2, "", "",200,Assertions.LoadProduction("m3")}*/};
+				{41729, 0, 2, null, null,200,Assertions.LoadProduction("m1"),"first"},
+				{41729, 0, 2, "", "",200,Assertions.LoadProduction("m2"),"Second"},
+				{41729, 0, 2, "", "",200,Assertions.LoadProduction("m3"),"Third"}};
 		return test;
 	}
 
