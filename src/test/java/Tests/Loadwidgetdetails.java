@@ -21,7 +21,7 @@ public class Loadwidgetdetails {
 	
 
 @Test(dataProvider="data")
-	public static void LoadWidgetsDetails(int AccountId, int SectionId, int UserId, int ChartType, String StartDate,String EndDate, int statuscode,Map<String,Object> a) throws Exception {
+	public static void LoadWidgetsDetails(int AccountId, int SectionId, int UserId, int ChartType, String StartDate,String EndDate, int statuscode,Map<String,Object> a,Object y) throws Exception {
 		
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
@@ -53,9 +53,9 @@ public class Loadwidgetdetails {
 public Object[][] data()
 {
 	Object[][] test={
-			{41728, 7, 58779, 1, null,null,200,Assertions.LoadProduction("m1")},
-			/*{41728, 99, 58779, 1, null, null,200,Assertions.LoadProduction("m2")},
-			{41728, 7, 58779, 1, "", "",200,Assertions.LoadProduction("m3")}*/};
+			{41728, 7, 58779, 1, null,null,200,Assertions.LoadProduction("m1"),"First"},
+			{41728, 99, 58779, 1, null, null,200,Assertions.LoadProduction("m2"),"Second"},
+			{41728, 7, 58779, 1, "", "",200,Assertions.LoadProduction("m3"),"Third"}};
 	return test;
 }
 

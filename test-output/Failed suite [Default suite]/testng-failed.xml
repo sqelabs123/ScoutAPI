@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="Tests.Listeners1234"/>
-  </listeners>
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Default suite]]">
+  <test name="Default test(failed)(failed)">
     <classes>
       <class name="Tests.AddEditProductionGoal">
         <methods>
           <include name="config"/>
           <include name="teardown"/>
-          <include name="AddEditProductionGoals" invocation-numbers="3"/>
+          <include name="AddEditProductionGoals" invocation-numbers="0 3 4"/>
         </methods>
       </class> <!-- Tests.AddEditProductionGoal -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Default suite]] -->

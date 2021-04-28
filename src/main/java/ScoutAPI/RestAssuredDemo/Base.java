@@ -17,7 +17,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.path.json.JsonPath;
 
 public class Base {
-	
+	//hello checking
 	
 	static Properties prop;
 	static String hu = System.getProperty("user.dir")+"\\Prop.properties";
@@ -39,7 +39,7 @@ public class Base {
 	public static void Assert(String actual, String expected){
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actual, expected);
-
+ 
 	}
 	
 	
